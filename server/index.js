@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 
 app.post('/api/auth/register', ctrl.register)
 app.post('/api/auth/login', ctrl.login)
+app.get('/api/posts/:id', ctrl.getPosts)
 
 app.listen(SERVER_PORT, () => {
     console.log(`Server is listening on port: ${SERVER_PORT}`)
